@@ -24,7 +24,7 @@ export const deleteUser = async (
 
     const deletedUser = await deleteUserById(id);
 
-    return res.sendStatus(200);
+    return res.json(deletedUser);
   } catch (error) {
     console.error(error);
     return res.sendStatus(400);
